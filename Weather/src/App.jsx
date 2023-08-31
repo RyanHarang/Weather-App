@@ -3,8 +3,8 @@ import "./App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
-  const apiKey = "YOUR_API_KEY";
-  const city = "Bellingham";
+  const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
+  const city = "Bellevue";
 
   useEffect(() => {
     fetch(
