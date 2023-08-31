@@ -10,8 +10,14 @@ function App() {
     fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
     )
-      .then((response) => response.json())
-      .then((data) => setWeatherData(data));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        return response.json();
+      })
+      .then((data) => setWeatherData(data))
+      .catch((error) => console.error("API Error:", error));
   }, []);
 
   return (
