@@ -62,45 +62,47 @@ function App() {
 
   const listHeightInVh = 50; // Set your desired height in vh
   const listHeightInPixels = (windowHeight * listHeightInVh) / 100;
-  const listWidthInPixels = listHeightInPixels / 1.7;
+  const listWidthInPixels = 400;
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Weather App</h1>
-        <LocationSearch
-          setSelectedLocation={setSelectedLocation}
-          setSelectedCountry={setSelectedCountry}
-          setSelectedAdmin1Code={setSelectedAdmin1Code}
-          setFilteredLocations={setFilteredLocations}
-          list={locations}
-        />
-        <div className="divider"></div>
-        <List
-          className="city-list"
-          height={listHeightInPixels} // Adjust the height as needed
-          itemCount={filteredLocations.length}
-          itemSize={40} // Adjust the item size as needed
-          width={listWidthInPixels} // Adjust the width as needed
-        >
-          {({ index, style }) => (
-            <div
-              className="location-item"
-              style={style}
-              key={filteredLocations[index].geonameId}
-              onClick={() => {
-                setSelectedLocation(filteredLocations[index].name);
-                setSelectedAdmin1Code(filteredLocations[index].admin1Code);
-                setSelectedCountry(filteredLocations[index].countryCode);
-              }}
-            >
-              {filteredLocations[index].countryCode === "US"
-                ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
-                : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
-            </div>
-          )}
-        </List>
-        <div className="divider"></div>
+      </header>
+      <LocationSearch
+        setSelectedLocation={setSelectedLocation}
+        setSelectedCountry={setSelectedCountry}
+        setSelectedAdmin1Code={setSelectedAdmin1Code}
+        setFilteredLocations={setFilteredLocations}
+        list={locations}
+      />
+      <div className="divider"></div>
+      <List
+        className="city-list"
+        height={listHeightInPixels} // Adjust the height as needed
+        itemCount={filteredLocations.length}
+        itemSize={40} // Adjust the item size as needed
+        width={listWidthInPixels} // Adjust the width as needed
+      >
+        {({ index, style }) => (
+          <div
+            className="location-item"
+            style={style}
+            key={filteredLocations[index].geonameId}
+            onClick={() => {
+              setSelectedLocation(filteredLocations[index].name);
+              setSelectedAdmin1Code(filteredLocations[index].admin1Code);
+              setSelectedCountry(filteredLocations[index].countryCode);
+            }}
+          >
+            {filteredLocations[index].countryCode === "US"
+              ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
+              : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
+          </div>
+        )}
+      </List>
+      <div className="divider"></div>
+      <div className="data">
         {weatherData && (
           <div>
             <p>
@@ -112,7 +114,7 @@ function App() {
             <p>Weather: {weatherData.weather[0].description}</p>
           </div>
         )}
-      </header>
+      </div>
     </div>
   );
 }

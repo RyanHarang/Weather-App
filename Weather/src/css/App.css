@@ -43,6 +43,10 @@ h1 {
   height: 1vh;
 }
 
+.data {
+  height: 2vh;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
