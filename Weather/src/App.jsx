@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the text file's content
-    fetch("cities100000.txt")
+    fetch("cities85000.txt")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -21,7 +21,6 @@ function App() {
         return response.text();
       })
       .then((data) => {
-        // Parse the data using your parsing function
         const parsedLocations = GeoParser(data);
         setLocations(parsedLocations); // Store the parsed locations in state
       })
