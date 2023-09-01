@@ -1,29 +1,29 @@
 import React, { useState, useEffect } from "react";
-import ".././css/LocationSearch.css"; // Create a LocationSearch.css file for styling
+import "../css/LocationSearch.css";
 
-function LocationSearch({ setSelectedLocation }) {
+function LocationSearch({ setSelectedLocation, list }) {
   const [userInput, setUserInput] = useState("");
   const [filteredLocations, setFilteredLocations] = useState([]);
 
-  const allLocations = [
-    "Bellevue",
-    "New York",
-    "Los Angeles",
-    "Chicago" /* ... */,
-  ];
-
   useEffect(() => {
-    const filteredAndSortedLocations = allLocations
+    const filteredAndSortedLocations = list
       .filter((location) =>
-        location.toLowerCase().includes(userInput.toLowerCase())
+        `${location.name}, ${location.countryCode}`
+          .toLowerCase()
+          .includes(userInput.toLowerCase())
       )
-      .sort();
+      .sort((a, b) => {
+        // Sort by city name and country code
+        const aFullName = `${a.name}, ${a.countryCode}`;
+        const bFullName = `${b.name}, ${b.countryCode}`;
+        return aFullName.localeCompare(bFullName);
+      });
 
     setFilteredLocations(filteredAndSortedLocations);
-  }, [userInput]);
+  }, [userInput, list]);
 
   return (
-    <div className="location-search">
+    <div>
       <input
         type="text"
         value={userInput}
@@ -33,11 +33,11 @@ function LocationSearch({ setSelectedLocation }) {
       <div className="location-container">
         {filteredLocations.map((location) => (
           <div
-            key={location}
+            key={location.geonameId}
             className="location-item"
             onClick={() => setSelectedLocation(location)}
           >
-            {location}
+            {`${location.name}, ${location.countryCode}`}
           </div>
         ))}
       </div>

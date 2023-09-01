@@ -5,12 +5,13 @@ import "./css/App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
-  const [selectedLocation, setSelectedLocation] = useState("Bellevue");
+  const [selectedLocation, setSelectedLocation] = useState("");
+  const [locations, setLocations] = useState([]); // Use state to store the locations
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
-  const country = "US";
+  const country = "";
 
   useEffect(() => {
-    // Simulate reading data from a file
+    // Fetch the text file's content
     fetch("cities5000.txt")
       .then((response) => {
         if (!response.ok) {
@@ -19,11 +20,9 @@ function App() {
         return response.text();
       })
       .then((data) => {
-        // Parse the data using the parsing function
-        const locations = GeoParser(data);
-
-        // Use the parsed data in your application
-        console.log(locations);
+        // Parse the data using your parsing function
+        const parsedLocations = GeoParser(data);
+        setLocations(parsedLocations); // Store the parsed locations in state
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -48,7 +47,10 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Weather App</h1>
-        <LocationSearch setSelectedLocation={setSelectedLocation} />
+        <LocationSearch
+          setSelectedLocation={setSelectedLocation}
+          list={locations}
+        />
         {weatherData && (
           <div>
             <p>
