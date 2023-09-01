@@ -35,7 +35,9 @@ function LocationSearch({ setSelectedLocation, list }) {
           <div
             key={location.geonameId}
             className="location-item"
-            onClick={() => setSelectedLocation(location)}
+            onClick={() => {
+              setSelectedLocation(location.name); // Update selectedLocation with the location's name
+            }}
           >
             {`${location.name}, ${location.countryCode}`}
           </div>

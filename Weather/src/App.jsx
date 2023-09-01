@@ -12,7 +12,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the text file's content
-    fetch("cities5000.txt")
+    fetch("cities15000.txt")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
