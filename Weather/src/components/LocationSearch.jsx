@@ -11,6 +11,7 @@ function LocationSearch({
   const [filteredLocations, setFilteredLocations] = useState([]);
 
   useEffect(() => {
+    // Filter as users type
     const filteredAndSortedLocations = list
       .filter((location) =>
         `${location.name}, ${location.admin1Code}, ${location.countryCode}`
@@ -18,7 +19,7 @@ function LocationSearch({
           .includes(userInput.toLowerCase())
       )
       .sort((a, b) => {
-        // Sort by city name and country code
+        // Sort alphabetically by city name and country code
         const aFullName = `${a.name}, ${a.admin1Code}, ${a.countryCode}`;
         const bFullName = `${b.name}, ${b.admin1Code}, ${b.countryCode}`;
         return aFullName.localeCompare(bFullName);
@@ -41,7 +42,8 @@ function LocationSearch({
             key={location.geonameId}
             className="location-item"
             onClick={() => {
-              setSelectedLocation(location.name); // Update selectedLocation with the location's name
+              // Update all the location information onClick
+              setSelectedLocation(location.name);
               setSelectedAdmin1Code(location.admin1Code);
               setSelectedCountry(location.countryCode);
             }}
@@ -50,7 +52,6 @@ function LocationSearch({
             {location.countryCode === "US"
               ? `${location.name}, ${location.admin1Code}, ${location.countryCode}`
               : `${location.name}, ${location.countryCode}`}
-            {/*`${location.name}, ${location.admin1Code}, ${location.countryCode}`*/}
           </div>
         ))}
       </div>
