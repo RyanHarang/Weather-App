@@ -4,11 +4,11 @@ import "./App.css";
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
-  const city = "Bellevue";
+  const city = "Washington,us";
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`
     )
       .then((response) => {
         if (!response.ok) {
