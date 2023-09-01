@@ -34,6 +34,7 @@ function LocationSearch({
       <input
         type="text"
         value={userInput}
+        className="user-inp"
         onChange={(e) => setUserInput(e.target.value)}
         placeholder="Type a location"
       />

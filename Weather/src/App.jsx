@@ -62,6 +62,7 @@ function App() {
 
   const listHeightInVh = 50; // Set your desired height in vh
   const listHeightInPixels = (windowHeight * listHeightInVh) / 100;
+  const listWidthInPixels = listHeightInPixels / 1.7;
 
   return (
     <div className="App">
@@ -80,7 +81,7 @@ function App() {
           height={listHeightInPixels} // Adjust the height as needed
           itemCount={filteredLocations.length}
           itemSize={40} // Adjust the item size as needed
-          width={400} // Adjust the width as needed
+          width={listWidthInPixels} // Adjust the width as needed
         >
           {({ index, style }) => (
             <div

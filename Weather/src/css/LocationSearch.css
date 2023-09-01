@@ -1,5 +1,7 @@
-.city-list {
+.user-inp {
+  width: 29vh;
   height: 2vh;
+  font-size: 20px;
 }
 
 .location-item {
