@@ -5,7 +5,6 @@ function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState("Bellevue");
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
-  const city = "Bellevue";
   const country = "US";
 
   useEffect(() => {
