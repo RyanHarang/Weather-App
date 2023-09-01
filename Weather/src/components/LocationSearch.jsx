@@ -40,7 +40,11 @@ function LocationSearch({ setSelectedLocation, setSelectedCountry, list }) {
               setSelectedCountry(location.countryCode);
             }}
           >
-            {`${location.name}, ${location.admin1Code}, ${location.countryCode}`}
+            {/* Conditionally render the state */}
+            {location.countryCode === "US"
+              ? `${location.name}, ${location.admin1Code}, ${location.countryCode}`
+              : `${location.name}, ${location.countryCode}`}
+            {/*`${location.name}, ${location.admin1Code}, ${location.countryCode}`*/}
           </div>
         ))}
       </div>
