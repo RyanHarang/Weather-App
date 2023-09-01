@@ -11,15 +11,23 @@ function App() {
 
   useEffect(() => {
     // Simulate reading data from a file
-    const data = `
-      12345\tBellevue\tUS\t47.6104\t-122.2007
-      67890\tNew York\tUS\t40.7128\t-74.0060
-      // ... other data lines
-    `;
+    fetch("cities5000.txt")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        return response.text();
+      })
+      .then((data) => {
+        // Parse the data using the parsing function
+        const locations = GeoParser(data);
 
-    const locations = parseGeoNamesData(data);
-    // Use the parsed data in your application
-    console.log(locations);
+        // Use the parsed data in your application
+        console.log(locations);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+      });
   }, []);
 
   useEffect(() => {
