@@ -83,6 +83,7 @@ function App() {
       />
       <div className="content">
         <div className="divider"></div>
+
         <List
           className="city-list"
           height={listHeightInPixels}
