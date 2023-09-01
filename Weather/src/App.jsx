@@ -46,6 +46,11 @@ function App() {
       .catch((error) => console.error("API Error:", error));
   }, [selectedLocation]);
 
+  // Function to help with formatting
+  function capFirst(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   // Sizing
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   useEffect(() => {
@@ -79,10 +84,10 @@ function App() {
       <div className="divider"></div>
       <List
         className="city-list"
-        height={listHeightInPixels} // Adjust the height as needed
+        height={listHeightInPixels}
         itemCount={filteredLocations.length}
-        itemSize={40} // Adjust the item size as needed
-        width={listWidthInPixels} // Adjust the width as needed
+        itemSize={40}
+        width={listWidthInPixels}
       >
         {({ index, style }) => (
           <div
@@ -111,7 +116,7 @@ function App() {
               {selectedCountry}
             </p>
             <p>Temperature: {weatherData.main.temp} °F</p>
-            <p>Weather: {weatherData.weather[0].description}</p>
+            <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
           </div>
         )}
       </div>
