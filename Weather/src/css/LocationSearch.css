@@ -1,0 +1,32 @@
+.location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.location-search {
+  width: 100%;
+  max-width: 300px; /* Adjust the width as needed */
+  margin: auto;
+}
+
+.location-container {
+  max-height: 200px; /* Adjust the height as needed */
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.location-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #242424;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.location-item:hover {
+  background-color: #444;
+}

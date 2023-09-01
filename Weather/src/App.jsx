@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LocationSearch from "./components/LocationSearch";
-import "./App.css";
+import "./css/App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);

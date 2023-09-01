@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import ".././css/LocationSearch.css"; // Create a LocationSearch.css file for styling
 
 function LocationSearch({ setSelectedLocation }) {
   const [userInput, setUserInput] = useState("");
@@ -22,7 +23,7 @@ function LocationSearch({ setSelectedLocation }) {
   }, [userInput]);
 
   return (
-    <div>
+    <div className="location-search">
       <input
         type="text"
         value={userInput}
