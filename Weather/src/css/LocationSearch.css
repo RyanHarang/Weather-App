@@ -1,27 +1,10 @@
-.location-container {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  margin-top: 10px;
+.city-list {
+  height: 2vh;
 }
-
-.location-search {
-  width: 100%;
-  max-width: 300px; /* Adjust the width as needed */
-  margin: auto;
-}
-
-/*.location-container {
-  max-height: 200px;
-  overflow-y: auto;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 5px;
-}*/
 
 .location-item {
   cursor: pointer;
-  padding: 5px 10px;
+  padding: 5px 0px;
   background-color: #242424;
   border-radius: 5px;
   margin-bottom: 5px;

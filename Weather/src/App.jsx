@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FixedSizeList as List } from "react-window";
 import LocationSearch from "./components/LocationSearch";
 import GeoParser from "./components/GeoParser";
+import "./css/LocationSearch.css";
 import "./css/App.css";
 
 function App() {
@@ -45,6 +46,23 @@ function App() {
       .catch((error) => console.error("API Error:", error));
   }, [selectedLocation]);
 
+  // Sizing
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowHeight(window.innerHeight);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  const listHeightInVh = 50; // Set your desired height in vh
+  const listHeightInPixels = (windowHeight * listHeightInVh) / 100;
+
   return (
     <div className="App">
       <header className="App-header">
@@ -56,9 +74,10 @@ function App() {
           setFilteredLocations={setFilteredLocations}
           list={locations}
         />
+        <div className="divider"></div>
         <List
           className="city-list"
-          height={400} // Adjust the height as needed
+          height={listHeightInPixels} // Adjust the height as needed
           itemCount={filteredLocations.length}
           itemSize={40} // Adjust the item size as needed
           width={400} // Adjust the width as needed
@@ -80,6 +99,7 @@ function App() {
             </div>
           )}
         </List>
+        <div className="divider"></div>
         {weatherData && (
           <div>
             <p>

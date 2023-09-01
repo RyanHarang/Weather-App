@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "../css/LocationSearch.css";
 
 function LocationSearch({
   setSelectedLocation,
