@@ -11,13 +11,13 @@
   margin: auto;
 }
 
-.location-container {
-  max-height: 200px; /* Adjust the height as needed */
+/*.location-container {
+  max-height: 200px;
   overflow-y: auto;
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 5px;
-}
+}*/
 
 .location-item {
   cursor: pointer;

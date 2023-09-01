@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { FixedSizeList as List } from "react-window";
 import LocationSearch from "./components/LocationSearch";
 import GeoParser from "./components/GeoParser";
 import "./css/App.css";
@@ -8,7 +9,8 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState("Seattle");
   const [selectedAdmin1Code, setSelectedAdmin1Code] = useState("WA");
   const [selectedCountry, setSelectedCountry] = useState("US");
-  const [locations, setLocations] = useState([]); // Use state to store the locations
+  const [locations, setLocations] = useState([]);
+  const [filteredLocations, setFilteredLocations] = useState([]);
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
 
   useEffect(() => {
@@ -51,8 +53,33 @@ function App() {
           setSelectedLocation={setSelectedLocation}
           setSelectedCountry={setSelectedCountry}
           setSelectedAdmin1Code={setSelectedAdmin1Code}
+          setFilteredLocations={setFilteredLocations}
           list={locations}
         />
+        <List
+          className="city-list"
+          height={400} // Adjust the height as needed
+          itemCount={filteredLocations.length}
+          itemSize={40} // Adjust the item size as needed
+          width={400} // Adjust the width as needed
+        >
+          {({ index, style }) => (
+            <div
+              className="location-item"
+              style={style}
+              key={filteredLocations[index].geonameId}
+              onClick={() => {
+                setSelectedLocation(filteredLocations[index].name);
+                setSelectedAdmin1Code(filteredLocations[index].admin1Code);
+                setSelectedCountry(filteredLocations[index].countryCode);
+              }}
+            >
+              {filteredLocations[index].countryCode === "US"
+                ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
+                : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
+            </div>
+          )}
+        </List>
         {weatherData && (
           <div>
             <p>

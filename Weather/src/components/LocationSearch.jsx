@@ -5,10 +5,12 @@ function LocationSearch({
   setSelectedLocation,
   setSelectedAdmin1Code,
   setSelectedCountry,
+  setFilteredLocations,
   list,
 }) {
   const [userInput, setUserInput] = useState("");
-  const [filteredLocations, setFilteredLocations] = useState([]);
+  const filteredLocations = [];
+  //const [filteredLocations, setFilteredLocations] = useState([]);
 
   useEffect(() => {
     // Filter as users type
