@@ -1,5 +1,5 @@
 #root {
-  max-width: 1280px;
+  /*max-width: 1280px;*/
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -34,6 +34,17 @@ h1 {
   line-height: 1.1;
 }
 
+.content {
+  display: flex;
+  flex-direction: row; /* Arrange children horizontally */
+  align-items: flex-start; /* Align items at the top */
+  justify-content: space-between; /* Add space between children */
+  padding: 2rem;
+  text-align: center;
+  min-width: 200px;
+  min-height: 100vh;
+}
+
 .App-header {
   top: 0;
 }
@@ -43,8 +54,12 @@ h1 {
   height: 1vh;
 }
 
+.city-list {
+  width: 50%; /* Adjust the width as needed */
+}
+
 .data {
-  height: 2vh;
+  width: 50%;
 }
 
 @media (prefers-color-scheme: light) {

@@ -81,44 +81,46 @@ function App() {
         setFilteredLocations={setFilteredLocations}
         list={locations}
       />
-      <div className="divider"></div>
-      <List
-        className="city-list"
-        height={listHeightInPixels}
-        itemCount={filteredLocations.length}
-        itemSize={40}
-        width={listWidthInPixels}
-      >
-        {({ index, style }) => (
-          <div
-            className="location-item"
-            style={style}
-            key={filteredLocations[index].geonameId}
-            onClick={() => {
-              setSelectedLocation(filteredLocations[index].name);
-              setSelectedAdmin1Code(filteredLocations[index].admin1Code);
-              setSelectedCountry(filteredLocations[index].countryCode);
-            }}
-          >
-            {filteredLocations[index].countryCode === "US"
-              ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
-              : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
-          </div>
-        )}
-      </List>
-      <div className="divider"></div>
-      <div className="data">
-        {weatherData && (
-          <div>
-            <p>
-              Location: {selectedLocation},{" "}
-              {selectedCountry === "US" ? `${selectedAdmin1Code},` : ""}{" "}
-              {selectedCountry}
-            </p>
-            <p>Temperature: {weatherData.main.temp} °F</p>
-            <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
-          </div>
-        )}
+      <div className="content">
+        <div className="divider"></div>
+        <List
+          className="city-list"
+          height={listHeightInPixels}
+          itemCount={filteredLocations.length}
+          itemSize={40}
+          width={listWidthInPixels}
+        >
+          {({ index, style }) => (
+            <div
+              className="location-item"
+              style={style}
+              key={filteredLocations[index].geonameId}
+              onClick={() => {
+                setSelectedLocation(filteredLocations[index].name);
+                setSelectedAdmin1Code(filteredLocations[index].admin1Code);
+                setSelectedCountry(filteredLocations[index].countryCode);
+              }}
+            >
+              {filteredLocations[index].countryCode === "US"
+                ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
+                : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
+            </div>
+          )}
+        </List>
+        <div className="divider"></div>
+        <div className="data">
+          {weatherData && (
+            <div>
+              <p>
+                Location: {selectedLocation},{" "}
+                {selectedCountry === "US" ? `${selectedAdmin1Code},` : ""}{" "}
+                {selectedCountry}
+              </p>
+              <p>Temperature: {weatherData.main.temp} °F</p>
+              <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );
