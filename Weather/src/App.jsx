@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import LocationSearch from "./components/LocationSearch";
 import "./App.css";
 
 function App() {
@@ -25,15 +26,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Weather App</h1>
-        <select
-          value={selectedLocation}
-          onChange={(e) => setSelectedLocation(e.target.value)}
-        >
-          <option value="Bellevue">Bellevue</option>
-          <option value="New York">New York</option>
-          <option value="Los Angeles">Los Angeles</option>
-          {/* Add more options here */}
-        </select>
+        <LocationSearch setSelectedLocation={setSelectedLocation} />
         {weatherData && (
           <div>
             <p>

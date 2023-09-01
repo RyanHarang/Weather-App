@@ -5,17 +5,20 @@
   text-align: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.location-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.location-item {
+  cursor: pointer;
+  padding: 5px 10px;
+  background-color: #242424;
+  border-radius: 5px;
+}
+
+.location-item:hover {
+  background-color: #444;
 }
