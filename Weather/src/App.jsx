@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import LocationSearch from "./components/LocationSearch";
+import GeoParser from "./components/GeoParser";
 import "./css/App.css";
 
 function App() {
@@ -7,6 +8,19 @@ function App() {
   const [selectedLocation, setSelectedLocation] = useState("Bellevue");
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
   const country = "US";
+
+  useEffect(() => {
+    // Simulate reading data from a file
+    const data = `
+      12345\tBellevue\tUS\t47.6104\t-122.2007
+      67890\tNew York\tUS\t40.7128\t-74.0060
+      // ... other data lines
+    `;
+
+    const locations = parseGeoNamesData(data);
+    // Use the parsed data in your application
+    console.log(locations);
+  }, []);
 
   useEffect(() => {
     fetch(
