@@ -3,13 +3,14 @@ import "./App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
+  const [selectedLocation, setSelectedLocation] = useState("Bellevue");
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
-  const city = "Washington";
+  const city = "Bellevue";
   const country = "US";
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${apiKey}&units=imperial`
+      `https://api.openweathermap.org/data/2.5/weather?q=${selectedLocation},${country}&APPID=${apiKey}&units=imperial`
     )
       .then((response) => {
         if (!response.ok) {
@@ -19,16 +20,25 @@ function App() {
       })
       .then((data) => setWeatherData(data))
       .catch((error) => console.error("API Error:", error));
-  }, []);
+  }, [selectedLocation]);
 
   return (
     <div className="App">
       <header className="App-header">
         <h1>Weather App</h1>
+        <select
+          value={selectedLocation}
+          onChange={(e) => setSelectedLocation(e.target.value)}
+        >
+          <option value="Bellevue">Bellevue</option>
+          <option value="New York">New York</option>
+          <option value="Los Angeles">Los Angeles</option>
+          {/* Add more options here */}
+        </select>
         {weatherData && (
           <div>
             <p>
-              Location: {city}, {country}
+              Location: {selectedLocation}, {country}
             </p>
             <p>Temperature: {weatherData.main.temp} °F</p>
             <p>Weather: {weatherData.weather[0].description}</p>
