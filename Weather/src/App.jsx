@@ -5,10 +5,10 @@ import "./css/App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
-  const [selectedLocation, setSelectedLocation] = useState("");
+  const [selectedLocation, setSelectedLocation] = useState("Seattle");
+  const [selectedCountry, setSelectedCountry] = useState("US");
   const [locations, setLocations] = useState([]); // Use state to store the locations
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
-  const country = "";
 
   useEffect(() => {
     // Fetch the text file's content
@@ -31,7 +31,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${selectedLocation},${country}&APPID=${apiKey}&units=imperial`
+      `https://api.openweathermap.org/data/2.5/weather?q=${selectedLocation},${selectedCountry}&APPID=${apiKey}&units=imperial`
     )
       .then((response) => {
         if (!response.ok) {
@@ -49,12 +49,13 @@ function App() {
         <h1>Weather App</h1>
         <LocationSearch
           setSelectedLocation={setSelectedLocation}
+          setSelectedCountry={setSelectedCountry}
           list={locations}
         />
         {weatherData && (
           <div>
             <p>
-              Location: {selectedLocation}, {country}
+              Location: {selectedLocation}, {selectedCountry}
             </p>
             <p>Temperature: {weatherData.main.temp} °F</p>
             <p>Weather: {weatherData.weather[0].description}</p>
