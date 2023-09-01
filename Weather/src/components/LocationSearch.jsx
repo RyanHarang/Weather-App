@@ -8,14 +8,14 @@ function LocationSearch({ setSelectedLocation, setSelectedCountry, list }) {
   useEffect(() => {
     const filteredAndSortedLocations = list
       .filter((location) =>
-        `${location.name}, ${location.countryCode}`
+        `${location.name}, ${location.admin1Code}, ${location.countryCode}`
           .toLowerCase()
           .includes(userInput.toLowerCase())
       )
       .sort((a, b) => {
         // Sort by city name and country code
-        const aFullName = `${a.name}, ${a.countryCode}`;
-        const bFullName = `${b.name}, ${b.countryCode}`;
+        const aFullName = `${a.name}, ${a.admin1Code}, ${a.countryCode}`;
+        const bFullName = `${b.name}, ${b.admin1Code}, ${b.countryCode}`;
         return aFullName.localeCompare(bFullName);
       });
 
@@ -40,7 +40,7 @@ function LocationSearch({ setSelectedLocation, setSelectedCountry, list }) {
               setSelectedCountry(location.countryCode);
             }}
           >
-            {`${location.name}, ${location.countryCode}`}
+            {`${location.name}, ${location.admin1Code}, ${location.countryCode}`}
           </div>
         ))}
       </div>
