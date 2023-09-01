@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "../css/LocationSearch.css";
 
-function LocationSearch({ setSelectedLocation, setSelectedCountry, list }) {
+function LocationSearch({
+  setSelectedLocation,
+  setSelectedAdmin1Code,
+  setSelectedCountry,
+  list,
+}) {
   const [userInput, setUserInput] = useState("");
   const [filteredLocations, setFilteredLocations] = useState([]);
 
@@ -37,6 +42,7 @@ function LocationSearch({ setSelectedLocation, setSelectedCountry, list }) {
             className="location-item"
             onClick={() => {
               setSelectedLocation(location.name); // Update selectedLocation with the location's name
+              setSelectedAdmin1Code(location.admin1Code);
               setSelectedCountry(location.countryCode);
             }}
           >

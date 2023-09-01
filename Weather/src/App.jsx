@@ -6,6 +6,7 @@ import "./css/App.css";
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [selectedLocation, setSelectedLocation] = useState("Seattle");
+  const [selectedAdmin1Code, setSelectedAdmin1Code] = useState("WA");
   const [selectedCountry, setSelectedCountry] = useState("US");
   const [locations, setLocations] = useState([]); // Use state to store the locations
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
@@ -50,12 +51,15 @@ function App() {
         <LocationSearch
           setSelectedLocation={setSelectedLocation}
           setSelectedCountry={setSelectedCountry}
+          setSelectedAdmin1Code={setSelectedAdmin1Code}
           list={locations}
         />
         {weatherData && (
           <div>
             <p>
-              Location: {selectedLocation}, {selectedCountry}
+              Location: {selectedLocation},{" "}
+              {selectedCountry === "US" ? `${selectedAdmin1Code},` : ""}{" "}
+              {selectedCountry}
             </p>
             <p>Temperature: {weatherData.main.temp} °F</p>
             <p>Weather: {weatherData.weather[0].description}</p>
