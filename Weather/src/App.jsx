@@ -16,7 +16,7 @@ function App() {
 
   useEffect(() => {
     // Fetch the text file's content
-    fetch("cities85000.txt")
+    fetch("./txt/cities85000.txt")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -72,7 +72,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Weather App</h1>
+        <h1>Weather</h1>
       </header>
       <LocationSearch
         setSelectedLocation={setSelectedLocation}
