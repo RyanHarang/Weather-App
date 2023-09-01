@@ -4,11 +4,12 @@ import "./App.css";
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const apiKey = "04d6486432cd4ff9b431962dd1003d3a";
-  const city = "Washington,us";
+  const city = "Washington";
+  const country = "US";
 
   useEffect(() => {
     fetch(
-      `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=${apiKey}`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city},${country}&APPID=${apiKey}&units=imperial`
     )
       .then((response) => {
         if (!response.ok) {
@@ -26,7 +27,10 @@ function App() {
         <h1>Weather App</h1>
         {weatherData && (
           <div>
-            <p>Temperature: {weatherData.main.temp} °C</p>
+            <p>
+              Location: {city}, {country}
+            </p>
+            <p>Temperature: {weatherData.main.temp} °F</p>
             <p>Weather: {weatherData.weather[0].description}</p>
           </div>
         )}
