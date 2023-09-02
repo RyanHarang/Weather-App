@@ -75,18 +75,36 @@ function App() {
         return "mist";
       case "fog":
         return "fog";
+      case "smoke":
+        return "smoke";
+      case "haze":
+        return "haze";
+      case "drizzle":
+        return "drizzle";
+      case "light intensity drizzle":
+        return "light-intensity-drizzle";
       case "light rain":
         return "light-rain";
+      case "light intensity shower rain":
+        return "light-intensity-shower-rain";
       case "moderate rain":
         return "moderate-rain";
+      case "shower rain":
+        return "shower-rain";
       case "heavy rain":
         return "heavy-rain";
+      case "heavy intensity rain":
+        return "heavy-intensity-rain";
+      case "very heavy rain":
+        return "very-heavy-rain";
       case "thunderstorm":
         return "thunderstorm";
       case "snow":
         return "snow";
       case "hail":
         return "hail";
+      case "sand":
+        return "sand";
       case "tornado":
         return "tornado";
       default:

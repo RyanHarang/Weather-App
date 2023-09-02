@@ -1,3 +1,7 @@
+/*
+TODO: Find svg for heavy intesity rain, and if possible few clouds
+*/
+
 .clear-sky {
   background-image: url("/public/img/clearSky.svg");
   background-repeat: repeat;
@@ -31,7 +35,7 @@
 .mist {
   background-image: url("/public/img/mist.svg");
   background-repeat: repeat;
-  background-size: calc(25vw);
+  background-size: calc(20vw);
 }
 
 .fog {
@@ -40,7 +44,37 @@
   background-size: calc(25vw);
 }
 
+.smoke {
+  background-image: url("/public/img/smoke.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.haze {
+  background-image: url("/public/img/haze.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.drizzle {
+  background-image: url("/public/img/lightRain.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.light-intensity-drizzle {
+  background-image: url("/public/img/lightRain.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
 .light-rain {
+  background-image: url("/public/img/lightRain.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.light-intensity-shower-rain {
   background-image: url("/public/img/lightRain.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
@@ -52,7 +86,25 @@
   background-size: calc(25vw);
 }
 
+.shower-rain {
+  background-image: url("/public/img/moderateRain.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
 .heavy-rain {
+  background-image: url("/public/img/heavyRain.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.heavy-intensity-rain {
+  background-image: url("/public/img/heavyRain.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.very-heavy-rain {
   background-image: url("/public/img/heavyRain.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
@@ -72,6 +124,12 @@
 
 .hail {
   background-image: url("/public/img/hail.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
+.sand {
+  background-image: url("/public/img/sand.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
 }
