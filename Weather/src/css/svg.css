@@ -1,101 +1,83 @@
-.weather-icon {
-  width: 50px;
-}
-
 .clear-sky {
   background-image: url("/public/img/clearSky.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .few-clouds {
   background-image: url("/public/img/scatteredClouds.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .scattered-clouds {
   background-image: url("/public/img/scatteredClouds.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .broken-clouds {
   background-image: url("/public/img/brokenClouds.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .overcast-clouds {
   background-image: url("/public/img/overcastClouds.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .mist {
   background-image: url("/public/img/mist.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .fog {
   background-image: url("/public/img/fog.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .light-rain {
   background-image: url("/public/img/lightRain.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .moderate-rain {
   background-image: url("/public/img/moderateRain.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .heavy-rain {
   background-image: url("/public/img/heavyRain.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .thunderstorm {
   background-image: url("/public/img/thunderstorm.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .snow {
   background-image: url("/public/img/snow.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .hail {
   background-image: url("/public/img/hail.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }
 
 .tornado {
   background-image: url("/public/img/tornado.svg");
   background-repeat: repeat;
   background-size: calc(25vw);
-  /*background-size: cover;*/
 }

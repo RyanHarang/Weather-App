@@ -140,11 +140,6 @@ function App() {
             </p>
             <p>Temperature: {weatherData.main.temp} °F</p>
             <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
-            {/*<div
-              className={`weather-icon ${mapWeatherToCSSClass(
-                weatherData.weather[0].description
-              )}`}
-              ></div>*/}
           </div>
         )}
       </div>
