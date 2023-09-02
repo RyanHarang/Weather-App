@@ -29,25 +29,13 @@ body {
   min-height: 20vh;
 }
 
-.App-header {
-  font-size: 1.1em;
-  line-height: 1.1;
-}
-
-/*
-.content {
-  display: flex;
-  flex-direction: column; /* Arrange children horizontally 
-  align-items: flex-start; /* Align items at the top 
-  padding: 0.1rem;
-  text-align: center;
-  min-width: 200px;
-  min-height: 20vh;
-}
-*/
-
 .App {
   top: 0;
+}
+
+.App-header {
+  font-size: 1.1em;
+  line-height: 0.5;
 }
 
 .divider {
@@ -64,8 +52,12 @@ body {
 
 .data {
   width: 100%;
-  font-size: 18px;
+  font-size: 22px;
   text-align: left;
+}
+
+.data p {
+  margin: 10px 0;
 }
 
 @media (prefers-color-scheme: light) {

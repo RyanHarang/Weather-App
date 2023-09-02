@@ -96,7 +96,6 @@ function App() {
         )}
       </div>
 
-      {/*<div className="content">*/}
       <div className="divider"></div>
       <List
         className="city-list"
@@ -123,7 +122,6 @@ function App() {
         )}
       </List>
       <div className="divider"></div>
-      {/*</div>*/}
     </div>
   );
 }
