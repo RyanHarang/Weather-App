@@ -8,6 +8,7 @@ import "./css/App.css";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
+  const [weatherCondition, setWeatherCondition] = useState("default");
   const [selectedLocation, setSelectedLocation] = useState("Seattle");
   const [selectedAdmin1Code, setSelectedAdmin1Code] = useState("WA");
   const [selectedCountry, setSelectedCountry] = useState("US");
@@ -47,6 +48,52 @@ function App() {
       .catch((error) => console.error("API Error:", error));
   }, [selectedLocation]);
 
+  // useEffect to update background
+  useEffect(() => {
+    if (weatherData) {
+      const conditionClass = mapWeatherToCSSClass(
+        weatherData.weather[0].description
+      );
+      setWeatherCondition(conditionClass);
+    }
+  }, [weatherData]);
+
+  // Function to apply classes for conditional svg rendering
+  function mapWeatherToCSSClass(weatherDescription) {
+    switch (weatherDescription.toLowerCase()) {
+      case "clear sky":
+        return "clear-sky";
+      case "few clouds":
+        return "few-clouds";
+      case "scattered clouds":
+        return "scattered-clouds";
+      case "broken clouds":
+        return "broken-clouds";
+      case "overcast clouds":
+        return "overcast-clouds";
+      case "mist":
+        return "mist";
+      case "fog":
+        return "fog";
+      case "light rain":
+        return "light-rain";
+      case "moderate rain":
+        return "moderate-rain";
+      case "heavy rain":
+        return "heavy-rain";
+      case "thunderstorm":
+        return "thunderstorm";
+      case "snow":
+        return "snow";
+      case "hail":
+        return "hail";
+      case "tornado":
+        return "tornado";
+      default:
+        return "";
+    }
+  }
+
   // Function to help with formatting
   function capFirst(string) {
     return string.charAt(0).toUpperCase() + string.slice(1);
@@ -71,7 +118,7 @@ function App() {
   const listWidthInPixels = 400;
 
   return (
-    <div className="App">
+    <div className={`App ${weatherCondition}`}>
       <header className="App-header">
         <h1>Weather</h1>
       </header>
@@ -93,6 +140,11 @@ function App() {
             </p>
             <p>Temperature: {weatherData.main.temp} °F</p>
             <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
+            {/*<div
+              className={`weather-icon ${mapWeatherToCSSClass(
+                weatherData.weather[0].description
+              )}`}
+              ></div>*/}
           </div>
         )}
       </div>
