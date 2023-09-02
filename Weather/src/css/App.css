@@ -42,16 +42,17 @@ body {
 }
 
 .divider {
-  background-color: #222;
+  background-color: #868686;
   min-height: 1vh;
   width: 400px;
-  max-width: 20vw;
+  max-width: 40vw;
 }
 
 .city-list {
   text-align: center;
   font-size: 18px;
   background-color: transparent;
+  max-height: 40vh;
 }
 
 .data {
