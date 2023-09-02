@@ -73,8 +73,15 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Weather</h1>
-        <div className="divider"></div>
       </header>
+      <LocationSearch
+        setSelectedLocation={setSelectedLocation}
+        setSelectedCountry={setSelectedCountry}
+        setSelectedAdmin1Code={setSelectedAdmin1Code}
+        setFilteredLocations={setFilteredLocations}
+        list={locations}
+      />
+      <div className="divider"></div>
       <div className="data">
         {weatherData && (
           <div>
@@ -88,42 +95,35 @@ function App() {
           </div>
         )}
       </div>
+
+      {/*<div className="content">*/}
       <div className="divider"></div>
-      <LocationSearch
-        setSelectedLocation={setSelectedLocation}
-        setSelectedCountry={setSelectedCountry}
-        setSelectedAdmin1Code={setSelectedAdmin1Code}
-        setFilteredLocations={setFilteredLocations}
-        list={locations}
-      />
-      <div className="content">
-        <div className="divider"></div>
-        <List
-          className="city-list"
-          height={listHeightInPixels}
-          itemCount={filteredLocations.length}
-          itemSize={40}
-          width={listWidthInPixels}
-        >
-          {({ index, style }) => (
-            <div
-              className="location-item"
-              style={style}
-              key={filteredLocations[index].geonameId}
-              onClick={() => {
-                setSelectedLocation(filteredLocations[index].name);
-                setSelectedAdmin1Code(filteredLocations[index].admin1Code);
-                setSelectedCountry(filteredLocations[index].countryCode);
-              }}
-            >
-              {filteredLocations[index].countryCode === "US"
-                ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
-                : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
-            </div>
-          )}
-        </List>
-        <div className="divider"></div>
-      </div>
+      <List
+        className="city-list"
+        height={listHeightInPixels}
+        itemCount={filteredLocations.length}
+        itemSize={40}
+        width={listWidthInPixels}
+      >
+        {({ index, style }) => (
+          <div
+            className="location-item"
+            style={style}
+            key={filteredLocations[index].geonameId}
+            onClick={() => {
+              setSelectedLocation(filteredLocations[index].name);
+              setSelectedAdmin1Code(filteredLocations[index].admin1Code);
+              setSelectedCountry(filteredLocations[index].countryCode);
+            }}
+          >
+            {filteredLocations[index].countryCode === "US"
+              ? `${filteredLocations[index].name}, ${filteredLocations[index].admin1Code}, ${filteredLocations[index].countryCode}`
+              : `${filteredLocations[index].name}, ${filteredLocations[index].countryCode}`}
+          </div>
+        )}
+      </List>
+      <div className="divider"></div>
+      {/*</div>*/}
     </div>
   );
 }

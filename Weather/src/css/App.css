@@ -9,7 +9,6 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 500;
-  font-size: 18px;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -35,15 +34,17 @@ body {
   line-height: 1.1;
 }
 
+/*
 .content {
   display: flex;
-  flex-direction: column; /* Arrange children horizontally */
-  align-items: flex-start; /* Align items at the top */
+  flex-direction: column; /* Arrange children horizontally 
+  align-items: flex-start; /* Align items at the top 
   padding: 0.1rem;
   text-align: center;
   min-width: 200px;
   min-height: 20vh;
 }
+*/
 
 .App {
   top: 0;
@@ -56,11 +57,14 @@ body {
 }
 
 .city-list {
-  text-align: left;
+  text-align: center;
+  font-size: 18px;
+  background-color: #292929;
 }
 
 .data {
   width: 100%;
+  font-size: 18px;
   text-align: left;
 }
 

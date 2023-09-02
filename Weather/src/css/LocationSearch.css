@@ -7,8 +7,8 @@
 
 .location-item {
   cursor: pointer;
-  padding: 5px 0px;
-  background-color: #242424;
+  padding: 5px 0px 5px 0px;
+  background-color: #292929;
   border-radius: 5px;
   margin-bottom: 5px;
 }
