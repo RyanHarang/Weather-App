@@ -24,7 +24,6 @@
 
 body {
   margin: 0;
-  /*display: flex;*/
   min-width: 200px;
   min-height: 20vh;
 }
@@ -51,7 +50,8 @@ body {
 .city-list {
   text-align: center;
   font-size: 18px;
-  background-color: #292929;
+  background-color: transparent;
+  /*background-color: #292929;*/
 }
 
 .data {

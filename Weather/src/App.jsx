@@ -97,6 +97,8 @@ function App() {
         return "heavy-intensity-rain";
       case "very heavy rain":
         return "very-heavy-rain";
+      case "light thunderstorm":
+        return "light-thunderstorm";
       case "thunderstorm":
         return "thunderstorm";
       case "snow":
