@@ -1,0 +1,55 @@
+.clear-sky {
+  background-image: url("/public/img/clearSky.svg");
+}
+
+.few-clouds {
+  background-image: url("/public/img/scatteredClouds.svg");
+}
+
+.scattered-clouds {
+  background-image: url("/public/img/scatteredClouds.svg");
+}
+
+.broken-clouds {
+  background-image: url("/public/img/brokenClouds.svg");
+}
+
+.overcast-clouds {
+  background-image: url("/public/img/overcastClouds.svg");
+}
+
+.mist {
+  background-image: url("/public/img/mist.svg");
+}
+
+.fog {
+  background-image: url("/public/img/fog.svg");
+}
+
+.light-rain {
+  background-image: url("/public/img/lightRain.svg");
+}
+
+.moderate-rain {
+  background-image: url("/public/img/moderateRain.svg");
+}
+
+.heavy-rain {
+  background-image: url("/public/img/heavyRain.svg");
+}
+
+.thunderstorm {
+  background-image: url("/public/img/thunderstorm.svg");
+}
+
+.snow {
+  background-image: url("/public/img/snow.svg");
+}
+
+.hail {
+  background-image: url("/public/img/hail.svg");
+}
+
+.tornado {
+  background-image: url("/public/img/tornado.svg");
+}

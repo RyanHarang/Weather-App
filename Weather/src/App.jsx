@@ -3,6 +3,7 @@ import { FixedSizeList as List } from "react-window";
 import LocationSearch from "./components/LocationSearch";
 import GeoParser from "./components/GeoParser";
 import "./css/LocationSearch.css";
+import "./css/svg.css";
 import "./css/App.css";
 
 function App() {
