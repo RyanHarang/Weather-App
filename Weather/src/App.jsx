@@ -73,7 +73,22 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Weather</h1>
+        <div className="divider"></div>
       </header>
+      <div className="data">
+        {weatherData && (
+          <div>
+            <p>
+              Location: {selectedLocation},{" "}
+              {selectedCountry === "US" ? `${selectedAdmin1Code},` : ""}{" "}
+              {selectedCountry}
+            </p>
+            <p>Temperature: {weatherData.main.temp} °F</p>
+            <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
+          </div>
+        )}
+      </div>
+      <div className="divider"></div>
       <LocationSearch
         setSelectedLocation={setSelectedLocation}
         setSelectedCountry={setSelectedCountry}
@@ -83,7 +98,6 @@ function App() {
       />
       <div className="content">
         <div className="divider"></div>
-
         <List
           className="city-list"
           height={listHeightInPixels}
@@ -109,19 +123,6 @@ function App() {
           )}
         </List>
         <div className="divider"></div>
-        <div className="data">
-          {weatherData && (
-            <div>
-              <p>
-                Location: {selectedLocation},{" "}
-                {selectedCountry === "US" ? `${selectedAdmin1Code},` : ""}{" "}
-                {selectedCountry}
-              </p>
-              <p>Temperature: {weatherData.main.temp} °F</p>
-              <p>Weather: {capFirst(weatherData.weather[0].description)}</p>
-            </div>
-          )}
-        </div>
       </div>
     </div>
   );
