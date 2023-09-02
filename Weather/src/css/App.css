@@ -13,7 +13,7 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #333;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,16 +42,16 @@ body {
 }
 
 .divider {
-  background-color: #333;
+  background-color: #222;
   min-height: 1vh;
-  min-width: 26.5%;
+  width: 400px;
+  max-width: 20vw;
 }
 
 .city-list {
   text-align: center;
   font-size: 18px;
   background-color: transparent;
-  /*background-color: #292929;*/
 }
 
 .data {

@@ -110,7 +110,7 @@ function App() {
       case "tornado":
         return "tornado";
       default:
-        return "";
+        return "default";
     }
   }
 

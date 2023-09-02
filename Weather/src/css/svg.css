@@ -2,6 +2,12 @@
 TODO: Find svg for heavy intesity rain, and if possible few clouds
 */
 
+.default {
+  background-image: url("/img/default.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
 .clear-sky {
   background-image: url("/img/clearSky.svg");
   background-repeat: repeat;
