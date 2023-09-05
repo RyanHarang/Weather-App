@@ -4426,12 +4426,6 @@
 685826	Baia Mare	Baia Mare	BAY,Baia Mare,Baja Mare,Baja-Mare,Frauenbach,Nagybanya,Nagybánya,Neustadt,Rivulus Dominarum,Бая-Маре	47.65729	23.56808	P	PPLA	RO		25	106318			136553		220	Europe/Bucharest	2017-10-28
 685948	Bacău	Bacau	BCM,Bacau,Bacău,Bakehu,Bako,Bakuu,Bákó,Бакъу,Бакэу,בקאו	46.56718	26.91384	P	PPLA	RO		04	20297			171396		165	Europe/Bucharest	2019-04-18
 686254	Arad	Arad	ARW,Altarad,Arad,Aradia,Aradinum Vetus,Micalaca,Micălaca,Mikelaka,Murasel,Muresel,Mureşel,Murăşel,O-Arad,Orodinum,Zsigmondhaza,Zsigmondháza,Ō-Arad,ʻrd,Арад,ערד	46.18333	21.31667	P	PPLA	RO		02	9262			169065		109	Europe/Bucharest	2017-07-04
-11048317	Sector 1	Sector 1	Sectorul 1	44.49239	26.04831	P	PPLX	RO		10	179132	11055041		225453		86	Europe/Bucharest	2017-11-24
-11048318	Sector 2	Sector 2	Sectorul 2	44.4528	26.13321	P	PPLX	RO		10	179132	11055040		345370		80	Europe/Bucharest	2017-11-24
-11048319	Sector 3	Sector 3	Sectorul 3	44.4234	26.16874	P	PPLX	RO		10	179132	11055044		385439		76	Europe/Bucharest	2017-11-24
-11048320	Sector 4	Sector 4	Sectorul 4	44.37571	26.12085	P	PPLX	RO		10	179132	11055042		287828		79	Europe/Bucharest	2017-11-24
-11048322	Sector 5	Sector 5	Sectorul 5	44.38808	26.07144	P	PPLX	RO		10	179132	11055043		271575		81	Europe/Bucharest	2017-11-24
-11048323	Sector 6	Sector 6	Sectorul 6	44.43579	26.01649	P	PPLX	RO		10	179132	11055039		367760		95	Europe/Bucharest	2017-11-24
 783920	Zemun	Zemun	Opstina Zemun,Opština Zemun,Semlin,Semlino,Taurunum,Zemlen,Zemlén,Zemun,Zimony,jemun,ze meng,zemun,zmwn,Σεμλίνο,Земун,זמון,ゼムン,泽蒙,제문	44.8458	20.40116	P	PPLA3	RS		SE	0	70157		155591		100	Europe/Belgrade	2020-06-18
 787595	Novi Pazar	Novi Pazar	Novi Pazar,Novi Pazaras,Novi pazar,Novi-Pazar,Pazari i Ri,Yeni Pazar,Yenipazar,nobipajaleu,novi pazar,nwfy bazar,nwwy pazar,xin pa zha er,Νόβι Παζάρ,Нови Пазар,Нови пазар,Нови-Пазар,נובי פאזאר,نوفي بازار,نووی پازار,نۆڤی پازار، سربیا,ノヴィ・パザル,新帕扎爾,노비파자르	43.13667	20.51222	P	PPLA3	RS		SE	18	70874		85996		511	Europe/Belgrade	2016-05-18
 787657	Niš	Nis	INI,Nich,Nis,Nisch,Nish,Niso,Nissa,Nisz,Nix,Niŝo,Niš,Ниш	43.32472	21.90333	P	PPLA2	RS		SE	20			250000		194	Europe/Belgrade	2020-01-31
