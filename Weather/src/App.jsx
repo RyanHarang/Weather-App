@@ -60,6 +60,13 @@ function App() {
 
   // Function to apply classes for conditional svg rendering
   function mapWeatherToCSSClass(weatherDescription) {
+    return weatherDescription
+      .toLowerCase() // Convert to lowercase
+      .replace(/\s+/g, "-"); // Replace spaces with hyphens globally
+  }
+
+  /*
+  function mapWeatherToCSSClass(weatherDescription) {
     switch (weatherDescription.toLowerCase()) {
       case "clear sky":
         return "clear-sky";
@@ -115,6 +122,7 @@ function App() {
         return "default";
     }
   }
+  */
 
   // Function to help with formatting
   function capFirst(string) {
