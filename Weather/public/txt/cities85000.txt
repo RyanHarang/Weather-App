@@ -2882,7 +2882,6 @@
 1277835	Bahādurgarh	Bahadurgarh	Bahadurgarh,Bahādurgarh	28.69287	76.93555	P	PPL	IN		10	083			153613		215	Asia/Kolkata	2015-08-07
 1277936	Bagalkot	Bagalkot	Bagalakote,Bagalkot,Bāgalkot,ba jia er ke te,bagalakota,pakalkot,Багалкот,बागलकोट,বাগলকোট,பாகல்கோட்,బాగల్‌కోట్,巴加尔科特	16.18673	75.69614	P	PPL	IN		19	556			97269		532	Asia/Kolkata	2014-10-14
 1277939	Bagaha	Bagaha	Bagaha	27.09918	84.09003	P	PPL	IN		34	203			103855		94	Asia/Kolkata	2019-06-16
-1277940	Bagaha	Bagaha	Bagaha,Bagaha Division	24.52898	85.06019	P	PPL	IN		34	236			91383		155	Asia/Kolkata	2019-06-16
 1277976	Badlapur	Badlapur	Badlapur,ba de la pu er,badalapura,bdlapwr,بدلاپور,बदलापूर,बादलपुर,বাদলাপুর,巴德拉普尔	19.15516	73.26553	P	PPL	IN		16	517			104636		24	Asia/Kolkata	2014-10-13
 1278083	Azamgarh	Azamgarh	Azamgarh,Azamgarkh,a zha mu jia er,ajamagadha,ajamagadha jilla,ajamagadha-nagaram,ajamagara,ajhamagadha,azamagarha,azamugaru,Āzamgarh,Азамгарх,اعظم گڑھ,आजमगढ,आजमगढ जिल्ला,आजमगढ-नगरम्,आज़मगढ़,आझमगढ,আজমগড়,આઝમગઢ,ଆଜମ୍‌ଗଡ଼,アーザムガル,阿扎姆加尔	26.06832	83.18358	P	PPLA2	IN		36	191			116644		84	Asia/Kolkata	2020-06-16
 1278130	Āvadi	Avadi	Avadi,Āvadi,Авади	13.1147	80.10981	P	PPL	IN		25	604			250044		29	Asia/Kolkata	2014-10-14

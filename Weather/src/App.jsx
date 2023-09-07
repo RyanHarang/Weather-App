@@ -101,6 +101,8 @@ function App() {
         return "light-thunderstorm";
       case "thunderstorm":
         return "thunderstorm";
+      case "thunderstorm with heavy rain":
+        return "thunderstorm-with-heavy-rain";
       case "snow":
         return "snow";
       case "hail":

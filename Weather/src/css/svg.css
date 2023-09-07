@@ -128,6 +128,12 @@ TODO: Find svg for heavy intesity rain, and if possible few clouds
   background-size: calc(25vw);
 }
 
+.thunderstorm-with-heavy-rain {
+  background-image: url("/img/thunderstorm.svg");
+  background-repeat: repeat;
+  background-size: calc(25vw);
+}
+
 .snow {
   background-image: url("/img/snow.svg");
   background-repeat: repeat;
