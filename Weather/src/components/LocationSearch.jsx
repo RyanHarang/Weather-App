@@ -9,7 +9,6 @@ function LocationSearch({
 }) {
   const [userInput, setUserInput] = useState("");
   const filteredLocations = [];
-  //const [filteredLocations, setFilteredLocations] = useState([]);
 
   useEffect(() => {
     // Filter as users type
